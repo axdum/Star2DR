@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <fragment
+        android:id="@+id/fragment_date"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="495dp"
+        class="mob.star2dr.fragments.DateFragment" />
+
+    <fragment
+        android:id="@+id/fragment_stops"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        class="mob.star2dr.fragments.StopsFragment" />
+
+    <fragment
+        android:id="@+id/fragment_stop_times"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="495dp"
+        class="mob.star2dr.fragments.StopTimesFragment" />
+
+    <fragment
+        android:id="@+id/fragment_routes_detail"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        class="mob.star2dr.fragments.RouteDetailFragment" />
+</LinearLayout>
+
