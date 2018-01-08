@@ -60,8 +60,14 @@ public class LigneAdaptater extends ArrayAdapter<BusRoutes> {
         holder.shortName.setText(ligne.getShort_name());
         String Dirs = ligne.getLong_name();
         String[] splitDirs = Dirs.split("<>");
-        holder.Dir1.setText("test dir 1");
-        holder.Dir2.setText("test dir 2");
+        if(splitDirs.length == 2){
+            holder.Dir1.setText(splitDirs[0]);
+            holder.Dir2.setText(splitDirs[1]);
+        }else if(splitDirs.length == 3){
+            holder.Dir1.setText(splitDirs[0]);
+            holder.Dir2.setText(splitDirs[2]);
+        }
+
 
         // color
         holder.shortName.setBackgroundColor(Color.parseColor("#" + ligne.getColor()));
