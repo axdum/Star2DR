@@ -26,6 +26,7 @@ public class LigneAdaptater extends ArrayAdapter<BusRoutes> {
     private final Context context;
     private final ArrayList<BusRoutes> data;
     private final int layoutResourceId;
+    private final String c = "#000000";
 
     public LigneAdaptater(@NonNull Context context, @LayoutRes int layoutResourceId, @NonNull ArrayList<BusRoutes> data) {
         super(context, layoutResourceId, data);
@@ -37,7 +38,7 @@ public class LigneAdaptater extends ArrayAdapter<BusRoutes> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
-        ViewHolder holder = null;
+        final ViewHolder holder;
 
         if(row == null)
         {
@@ -71,13 +72,13 @@ public class LigneAdaptater extends ArrayAdapter<BusRoutes> {
         holder.Dir1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+             //   holder.Dir1.setTextColor(Color.parseColor("#2196F3"));
             }
         });
         holder.Dir2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+             //   holder.Dir2.setTextColor(Color.parseColor("#2196F3"));
             }
         });
 

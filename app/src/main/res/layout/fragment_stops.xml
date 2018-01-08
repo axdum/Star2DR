@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="mob.star2dr.fragments.StopsFragment"
-    android:background="#3524b7">
+    android:background="#EEEEEE">
 
     <ListView
         android:id="@+id/arretsLV"

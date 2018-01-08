@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="mob.star2dr.fragments.RouteDetailFragment"
-    android:background="#f2d307">
+    android:background="#EEEEEE">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

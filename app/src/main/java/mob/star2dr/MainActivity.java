@@ -1,6 +1,7 @@
 package mob.star2dr;
 
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.SearchManager;
 import android.net.Uri;
@@ -24,18 +25,23 @@ public class MainActivity extends AppCompatActivity implements DateFragment.OnFr
     private DateFragment dateFragment;
     private StopsFragment stopsFragment;
     private RouteDetailFragment routeDetailFragment;
-    private StopTimes stopTimesFragment;
+    private StopTimesFragment stopTimesFragment;
 
-    private android.app.FragmentManager fm;
+    private FragmentManager fm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        fm = this.getFragmentManager();
-        //dateFragment = (DateFragment) fm.findFragmentById(R.id.fragment_date);
-        android.app.FragmentTransaction ft =fm.beginTransaction();
-
+        fm = this.getSupportFragmentManager();
+        dateFragment = (DateFragment) fm.findFragmentById(R.id.fragment_date);
+        stopsFragment = (StopsFragment) fm.findFragmentById(R.id.fragment_stops);
+        routeDetailFragment = (RouteDetailFragment) fm.findFragmentById(R.id.fragment_routes_detail);
+        stopTimesFragment = (StopTimesFragment) fm.findFragmentById(R.id.fragment_stop_times);
+        FragmentTransaction ft =fm.beginTransaction();
+        ft.hide(routeDetailFragment);
+        ft.hide(stopTimesFragment);
+        ft.commit();
     }
 
     @Override
