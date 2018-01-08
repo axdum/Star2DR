@@ -185,11 +185,14 @@ public class DateFragment extends Fragment {
     }
 
     private void loadLignes(){
-        List<ProviderInfo> providers = getContext().getPackageManager()
-                .queryContentProviders(null, 0, 0);
         // Ici on récupère nos données
-        ContentResolver contentResolver = getActivity().getContentResolver();
+        /*ContentResolver contentResolver = getContext().getContentResolver();
+
+
         Cursor c = contentResolver.query(Uri.parse("content://com.example.nicolas.star1dr.busroute"), null, null, null, null);
+
+        List<ProviderInfo> providers = getContext().getPackageManager()
+                .queryContentProviders(null, 0, 0);*/
 
         ArrayList<BusRoutes> listLignes = new ArrayList<BusRoutes>();
         listLignes.add(new BusRoutes("C1","Cesson-Sévigné (Champs Blancs) <> Rennes  <> Chantepie (Rosa Parks)","CHRONOSTAR","3","95C11E","1A171B"));

@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,12 +63,23 @@ public class LigneAdaptater extends ArrayAdapter<BusRoutes> {
         String[] splitDirs = Dirs.split("<>");
         if(splitDirs.length == 2){
             holder.Dir1.setText(splitDirs[0]);
-            holder.Dir2.setText(splitDirs[1]);
+            holder.Dir2.setText(splitDirs[1].substring(1));
         }else if(splitDirs.length == 3){
             holder.Dir1.setText(splitDirs[0]);
-            holder.Dir2.setText(splitDirs[2]);
+            holder.Dir2.setText(splitDirs[2].substring(1));
         }
+        holder.Dir1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
+        holder.Dir2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         // color
         holder.shortName.setBackgroundColor(Color.parseColor("#" + ligne.getColor()));
